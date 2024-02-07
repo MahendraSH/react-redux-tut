@@ -24,7 +24,7 @@ const userSlice = createSlice({
       reducer(state, action: PayloadAction<postUserType>) {
         state.users.push(action.payload);
       },
-      prepare(userName: string) {
+      prepare(userName: string) {a
         return {
           payload: {
             id: nanoid(4),
