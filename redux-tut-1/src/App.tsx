@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/button";
-import Navbar from "./components/navbar";
-import Footer from "./components/footer";
-import { ThemeProvider } from "./components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
-import { useAppDispatch, useAppSelector } from "./app/features/hooks";
-import { Minus, MinusSquare, Plus, PlusSquare } from "lucide-react";
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
 import {
   decrement,
   decrementByValue,
   increment,
   incrementByValue,
 } from "./app/features/counter/counterSlice";
-import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "./app/features/hooks";
+import Footer from "./components/footer";
+import { ModeToggle } from "./components/mode-toggle";
+import Navbar from "./components/navbar";
+import { ThemeProvider } from "./components/theme-provider";
 
 export default function App() {
   const [num, setNum] = useState<number | null>(null);
